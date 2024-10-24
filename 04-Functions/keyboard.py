@@ -2,25 +2,22 @@
 # Functions to read any data type from the keyboard
 #
 def input_string(message):
-    message = input(message)
-    return message
+    user_input = input(message)
+    return user_input
 
 def input_integer(message):
-    intiger = input(message)
-    return intiger
+    user_input = int(input(message))
+    return user_input
 
 def input_real(message):
-    real = input(message)
-    return real
+    user_input = float(input(message))
+    return user_input
 
 def input_boolean(message):
-    boolean = input(message)
-    if boolean == 'y' or boolean == 'Y':
+    user_input = input(message).lower()
+    if user_input == 'Y':
         return True
-    elif boolean == 'n' or boolean == 'N':
+    elif user_input == 'N':
         return False
 
-if __name__ == "__main__":
-    # only execute when you run this module
-    # so you can test the functions in this place
-    print("a")
+

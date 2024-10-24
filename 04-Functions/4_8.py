@@ -1,15 +1,15 @@
+import time
+
 def time_string(hours, minutes, time_format):
-    minutes = str(minutes)
     if time_format == '24':
-        result = str(hours) + ":" + minutes
+        return f"{hours:02}:{minutes:02}"
     elif time_format == '12':
-        if hours < 12:
-            hours -= 12
-            hours = str(hours)
-            result = hours + ":" + minutes + "pm"
-        else:
-            result = str(hours) + ":" + minutes + "am"
-    return result
+        if hours >= 12:
+            peroid = "pm"
+            hours = hours - 12
+        elif hours < 12:
+            peroid = "am"
+        return f"{hours:02}:{minutes:02}{peroid}"
 
 print(time_string(15, 38, '24'))
 print(time_string(8, 3, '24'))
