@@ -1,13 +1,17 @@
 def f(expression):
-    digits = '0123456789'
     result = 0
+    current = 0
+    sign = 1
     for char in expression:
-        if char in digits:
-            char = int(char)
-            result += char
-        else:
-            return False
-        
+        if char.isdigit():
+            current = int(char)
+            result += current * sign
+        elif char == '+':
+            sign = 1
+        elif char == '-':
+            sign = -1
     return result
 
-print(f("53"))
+print(f("5+3"))
+print(f("3+8+1"))
+print(f("2+3-4+5-0"))
