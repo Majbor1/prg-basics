@@ -10,4 +10,5 @@ def f(n):
     return x
 
     
-print(f(6))
+for i in range(10):
+    print(f(i))
