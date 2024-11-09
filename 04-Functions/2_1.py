@@ -1,7 +1,7 @@
 ###
 # Program for testing built-in functions
 #
-import math
+
 max_number = max(7,5,6,3,8,2)
 print('Max number of 7,5,6,3,8,2 is', max_number)
 

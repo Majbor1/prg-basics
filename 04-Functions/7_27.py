@@ -5,8 +5,11 @@ def f(dice):
         count = str(count)
         num_counted += count
         highest = max(num_counted)
-    
+
     return highest
+    
+    
+    
 
 print(f("5233165554211"))
 print(f("2133"))
