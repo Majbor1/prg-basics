@@ -7,6 +7,6 @@ product_quantities = [5, 20, 10, 15, 7, 12, 25, 18, 9, 4]
 value = 0
 
 for i in range(len(product_prices)):
-    value = product_prices[i] * product_quantities[i]
+    value += product_prices[i] * product_quantities[i]
 
 print(value)
