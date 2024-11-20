@@ -1,15 +1,12 @@
-import re
+from emails import email_sender, email_recipient, email_subject, email_body
 
-file_name = 'email.txt'
+# Load the email content
+with open('email.txt') as file:
+    email_content = file.read()
 
-with open(file_name) as file:
-    content = file.read()
-
-sender = "^jan.*com$"
-repicient = '^To..com>$'
-email_subject = ''
-email_body = ''
-
-find_sender = re.findall(sender, content)
-
-print(find_sender)
+# Extract and print the email components
+print("Sender Email Address:", email_sender(email_content))
+print("Recipient Email Address:", email_recipient(email_content))
+print("Email Subject:", email_subject(email_content))
+print("Email Body:")
+print(email_body(email_content))
