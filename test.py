@@ -1,13 +1,9 @@
-a = 2
+arr = [1,2,3,6,8,4,81,1,5,9]
+n = len(arr)
 
-b = 3
-c = a + b
-d = a + 5 - c
+for i in range(n):
+    for j in range(0, n-i-1):
+        if arr[j]>arr[j+1]:
+            arr[j], arr[j+1] = arr[j+1], arr[j]
 
-total = ""
-
-for i in range(1, 11):
-    i = str(i)
-    total += i
-
-print(total)
+print(arr)
