@@ -16,16 +16,29 @@ cards = queue.LifoQueue()
 cards.put('King of Hearts \u2665')    
 cards.put('Queen of Diamonds \u2666')  
 cards.put('Jack of Spades \u2660')     
+cards.put(2)
+cards.put(3)
+cards.put(4)
+cards.put(1)
+cards.put(9)
+cards.put(8)
 
 ## prints number of elements of the stack
 print('Number of stack elements:', cards.qsize())
 
-# removes and prints elements from the top of the stack
+i = 0
+sum = 0
+sum2 = 0
+
 while not cards.empty():
     card = cards.get()
     print(card)
+    if i == 0 or i == 1:
+        sum += card
+    else:
+        if str(card).isnumeric():
+            sum2 += card
+    i += 1 
 
-"""
-Note the order of the printed elements.
-The last added element is printed first.
-"""
+print(f"Sum of two last elements: {sum}")
+print(f"Sum of the rest elements: {sum2}")
