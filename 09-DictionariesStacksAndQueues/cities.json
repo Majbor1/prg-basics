@@ -6,6 +6,12 @@
         "area_km2": 517.24
     },
     {
+        "city": "Głogów",
+        "population": 67154,
+        "voivodeship": "Dolnośląskie",
+        "area_km2": 50412
+    },
+    {
         "city": "Kraków",
         "population": 779115,
         "voivodeship": "Małopolskie",
