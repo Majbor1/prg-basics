@@ -1,6 +1,6 @@
 from termo import Termometer
 import random
-import math
+
 
 def main():
     rand_temp = round(random.uniform(34.0, 42.0), 1)
